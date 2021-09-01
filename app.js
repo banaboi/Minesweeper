@@ -1,6 +1,6 @@
 const minefield = document.querySelector(".minefield");
 
-const numberOfBombs = 10;
+const numberOfBombs = 1;
 const width = 10;
 const height = 10;
 const field = [];
@@ -81,12 +81,13 @@ function control(square, i, j) {
         square.classList.add("clicked");
         square.innerHTML = "💣";
         updateGameStatus("Game Over!");
-    } else if (checkForWin() === true) {
-        updateGameStatus("Game Won!");
     } else {
         square.classList.remove("hidden");
         square.classList.add("revealed");
         reveal(i, j);
+        if (checkForWin() === true) {
+            updateGameStatus("Game Won!");
+        }
     }
 }
 
