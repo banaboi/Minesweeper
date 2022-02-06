@@ -1,35 +1,36 @@
-  * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  body {
+}
+
+body {
     background-color: white;
     width: 900px;
     margin: 0 auto;
-  }
+}
 
-  header {
+header {
     margin: 0;
     position: relative;
     padding-top: 30px;
     right: 30px;
     text-align: center;
-    font-size: 30px;
+    font-size: 6rem;
     font-weight: bold;
     font-family: monospace;
-  }
+}
 
-  .minefield {
-    position: absolute;
-    top: 100px;
-    right: 600px;
+.minefield {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     display: grid;
     background-color: grey;
     grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
-  }
-  .cell {
+}
+.cell {
     width: 15px;
     background-color: white(255, 255, 255, 0.8);
     border: 1px solid rgba(0, 0, 0, 0.8);
@@ -38,39 +39,38 @@
     font-family: monospace;
     font-size: 25px;
     text-align: center;
-  }
+}
 
-  .bomb {
+.bomb {
     border: 1px solid rgba(0, 0, 0, 0.8);
     text-align: center;
     font-family: monospace;
     font-size: 25px;
-  }
+}
 
-  .bomb.clicked {
+.bomb.clicked {
     background-color: red;
-  }
+}
 
- .revealed {
+.revealed {
     background-color: white;
-  }
+}
 
-  .cell.revealed {
+.cell.revealed {
     background-color: white;
     font-size: 20px;
-  }
+}
 
- .hidden {
-   background-color: grey;
- }
+.hidden {
+    background-color: grey;
+}
 
-  .change-color {
+.change-color {
     background: red;
     transition: 0.3s;
-  }
+}
 
-
-  .modal {
+.modal {
     z-index: 9;
     position: fixed;
     left: 0;
@@ -82,8 +82,8 @@
     visibility: hidden;
     transform: scale(1.1);
     transition: visibility 0s linear 0.3s, opacity 0.3s 0s, transform 0.3s;
-  }
-  .modal-content {
+}
+.modal-content {
     overflow-y: initial;
     position: absolute;
     top: 50%;
@@ -98,11 +98,9 @@
     font-weight: bold;
     text-align: center;
     padding-top: 200px;
-    
-  }
+}
 
-  
-  .close-button {
+.close-button {
     float: right;
     width: 1.5rem;
     line-height: 1.5rem;
@@ -110,13 +108,13 @@
     cursor: pointer;
     border-radius: 0.25rem;
     background-color: grey;
-  }
-  .close-button:hover {
+}
+.close-button:hover {
     background-color: white;
-  }
-  .show-modal {
+}
+.show-modal {
     opacity: 1;
     visibility: visible;
-    transform: scale(1.0);
+    transform: scale(1);
     transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
-  }
+}

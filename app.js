@@ -1,6 +1,6 @@
 const minefield = document.querySelector(".minefield");
 
-const numberOfBombs = 1;
+const numberOfBombs = 5;
 const width = 10;
 const height = 10;
 const field = [];
